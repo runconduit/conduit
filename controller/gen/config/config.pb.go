@@ -194,26 +194,30 @@ type Proxy struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ProxyImage              *Image                `protobuf:"bytes,1,opt,name=proxy_image,json=proxyImage,proto3" json:"proxy_image,omitempty"`
-	ProxyInitImage          *Image                `protobuf:"bytes,2,opt,name=proxy_init_image,json=proxyInitImage,proto3" json:"proxy_init_image,omitempty"`
-	ControlPort             *Port                 `protobuf:"bytes,3,opt,name=control_port,json=controlPort,proto3" json:"control_port,omitempty"`
-	IgnoreInboundPorts      []*PortRange          `protobuf:"bytes,4,rep,name=ignore_inbound_ports,json=ignoreInboundPorts,proto3" json:"ignore_inbound_ports,omitempty"`
-	IgnoreOutboundPorts     []*PortRange          `protobuf:"bytes,5,rep,name=ignore_outbound_ports,json=ignoreOutboundPorts,proto3" json:"ignore_outbound_ports,omitempty"`
-	InboundPort             *Port                 `protobuf:"bytes,6,opt,name=inbound_port,json=inboundPort,proto3" json:"inbound_port,omitempty"`
-	AdminPort               *Port                 `protobuf:"bytes,7,opt,name=admin_port,json=adminPort,proto3" json:"admin_port,omitempty"`
-	OutboundPort            *Port                 `protobuf:"bytes,8,opt,name=outbound_port,json=outboundPort,proto3" json:"outbound_port,omitempty"`
-	Resource                *ResourceRequirements `protobuf:"bytes,9,opt,name=resource,proto3" json:"resource,omitempty"`
-	ProxyUid                int64                 `protobuf:"varint,10,opt,name=proxy_uid,json=proxyUid,proto3" json:"proxy_uid,omitempty"`
-	LogLevel                *LogLevel             `protobuf:"bytes,11,opt,name=log_level,json=logLevel,proto3" json:"log_level,omitempty"`
-	DisableExternalProfiles bool                  `protobuf:"varint,12,opt,name=disable_external_profiles,json=disableExternalProfiles,proto3" json:"disable_external_profiles,omitempty"`
-	ProxyVersion            string                `protobuf:"bytes,13,opt,name=proxy_version,json=proxyVersion,proto3" json:"proxy_version,omitempty"`
-	ProxyInitImageVersion   string                `protobuf:"bytes,14,opt,name=proxy_init_image_version,json=proxyInitImageVersion,proto3" json:"proxy_init_image_version,omitempty"`
-	DebugImage              *Image                `protobuf:"bytes,15,opt,name=debug_image,json=debugImage,proto3" json:"debug_image,omitempty"`
-	DebugImageVersion       string                `protobuf:"bytes,16,opt,name=debug_image_version,json=debugImageVersion,proto3" json:"debug_image_version,omitempty"`
-	DestinationGetNetworks  string                `protobuf:"bytes,17,opt,name=destination_get_networks,json=destinationGetNetworks,proto3" json:"destination_get_networks,omitempty"`
-	LogFormat               string                `protobuf:"bytes,18,opt,name=log_format,json=logFormat,proto3" json:"log_format,omitempty"`
-	OutboundConnectTimeout  string                `protobuf:"bytes,19,opt,name=outbound_connect_timeout,json=outboundConnectTimeout,proto3" json:"outbound_connect_timeout,omitempty"`
-	InboundConnectTimeout   string                `protobuf:"bytes,20,opt,name=inbound_connect_timeout,json=inboundConnectTimeout,proto3" json:"inbound_connect_timeout,omitempty"`
+	ProxyImage               *Image                `protobuf:"bytes,1,opt,name=proxy_image,json=proxyImage,proto3" json:"proxy_image,omitempty"`
+	ProxyInitImage           *Image                `protobuf:"bytes,2,opt,name=proxy_init_image,json=proxyInitImage,proto3" json:"proxy_init_image,omitempty"`
+	ControlPort              *Port                 `protobuf:"bytes,3,opt,name=control_port,json=controlPort,proto3" json:"control_port,omitempty"`
+	IgnoreInboundPorts       []*PortRange          `protobuf:"bytes,4,rep,name=ignore_inbound_ports,json=ignoreInboundPorts,proto3" json:"ignore_inbound_ports,omitempty"`
+	IgnoreOutboundPorts      []*PortRange          `protobuf:"bytes,5,rep,name=ignore_outbound_ports,json=ignoreOutboundPorts,proto3" json:"ignore_outbound_ports,omitempty"`
+	InboundPort              *Port                 `protobuf:"bytes,6,opt,name=inbound_port,json=inboundPort,proto3" json:"inbound_port,omitempty"`
+	AdminPort                *Port                 `protobuf:"bytes,7,opt,name=admin_port,json=adminPort,proto3" json:"admin_port,omitempty"`
+	OutboundPort             *Port                 `protobuf:"bytes,8,opt,name=outbound_port,json=outboundPort,proto3" json:"outbound_port,omitempty"`
+	Resource                 *ResourceRequirements `protobuf:"bytes,9,opt,name=resource,proto3" json:"resource,omitempty"`
+	ProxyUid                 int64                 `protobuf:"varint,10,opt,name=proxy_uid,json=proxyUid,proto3" json:"proxy_uid,omitempty"`
+	LogLevel                 *LogLevel             `protobuf:"bytes,11,opt,name=log_level,json=logLevel,proto3" json:"log_level,omitempty"`
+	DisableExternalProfiles  bool                  `protobuf:"varint,12,opt,name=disable_external_profiles,json=disableExternalProfiles,proto3" json:"disable_external_profiles,omitempty"`
+	ProxyVersion             string                `protobuf:"bytes,13,opt,name=proxy_version,json=proxyVersion,proto3" json:"proxy_version,omitempty"`
+	ProxyInitImageVersion    string                `protobuf:"bytes,14,opt,name=proxy_init_image_version,json=proxyInitImageVersion,proto3" json:"proxy_init_image_version,omitempty"`
+	DebugImage               *Image                `protobuf:"bytes,15,opt,name=debug_image,json=debugImage,proto3" json:"debug_image,omitempty"`
+	DebugImageVersion        string                `protobuf:"bytes,16,opt,name=debug_image_version,json=debugImageVersion,proto3" json:"debug_image_version,omitempty"`
+	DestinationGetNetworks   string                `protobuf:"bytes,17,opt,name=destination_get_networks,json=destinationGetNetworks,proto3" json:"destination_get_networks,omitempty"`
+	LogFormat                string                `protobuf:"bytes,18,opt,name=log_format,json=logFormat,proto3" json:"log_format,omitempty"`
+	OutboundConnectTimeout   string                `protobuf:"bytes,19,opt,name=outbound_connect_timeout,json=outboundConnectTimeout,proto3" json:"outbound_connect_timeout,omitempty"`
+	InboundConnectTimeout    string                `protobuf:"bytes,20,opt,name=inbound_connect_timeout,json=inboundConnectTimeout,proto3" json:"inbound_connect_timeout,omitempty"`
+	InboundAcceptKeepalive   string                `protobuf:"bytes,21,opt,name=inbound_accept_keepalive,json=inboundAcceptKeepalive,proto3" json:"inbound_accept_keepalive,omitempty"`
+	OutboundAcceptKeepalive  string                `protobuf:"bytes,22,opt,name=outbound_accept_keepalive,json=outboundAcceptKeepalive,proto3" json:"outbound_accept_keepalive,omitempty"`
+	InboundConnectKeepalive  string                `protobuf:"bytes,23,opt,name=inbound_connect_keepalive,json=inboundConnectKeepalive,proto3" json:"inbound_connect_keepalive,omitempty"`
+	OutboundConnectKeepalive string                `protobuf:"bytes,24,opt,name=outbound_connect_keepalive,json=outboundConnectKeepalive,proto3" json:"outbound_connect_keepalive,omitempty"`
 }
 
 func (x *Proxy) Reset() {
@@ -384,6 +388,34 @@ func (x *Proxy) GetOutboundConnectTimeout() string {
 func (x *Proxy) GetInboundConnectTimeout() string {
 	if x != nil {
 		return x.InboundConnectTimeout
+	}
+	return ""
+}
+
+func (x *Proxy) GetInboundAcceptKeepalive() string {
+	if x != nil {
+		return x.InboundAcceptKeepalive
+	}
+	return ""
+}
+
+func (x *Proxy) GetOutboundAcceptKeepalive() string {
+	if x != nil {
+		return x.OutboundAcceptKeepalive
+	}
+	return ""
+}
+
+func (x *Proxy) GetInboundConnectKeepalive() string {
+	if x != nil {
+		return x.InboundConnectKeepalive
+	}
+	return ""
+}
+
+func (x *Proxy) GetOutboundConnectKeepalive() string {
+	if x != nil {
+		return x.OutboundConnectKeepalive
 	}
 	return ""
 }
@@ -929,7 +961,7 @@ var file_config_config_proto_rawDesc = []byte{
 	0x65, 0x62, 0x68, 0x6f, 0x6f, 0x6b, 0x53, 0x69, 0x64, 0x65, 0x45, 0x66, 0x66, 0x65, 0x63, 0x74,
 	0x73, 0x12, 0x25, 0x0a, 0x0e, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x64, 0x6f, 0x6d,
 	0x61, 0x69, 0x6e, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x63, 0x6c, 0x75, 0x73, 0x74,
-	0x65, 0x72, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x22, 0xec, 0x08, 0x0a, 0x05, 0x50, 0x72, 0x6f,
+	0x65, 0x72, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x22, 0xdc, 0x0a, 0x0a, 0x05, 0x50, 0x72, 0x6f,
 	0x78, 0x79, 0x12, 0x37, 0x0a, 0x0b, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x5f, 0x69, 0x6d, 0x61, 0x67,
 	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x6c, 0x69, 0x6e, 0x6b, 0x65, 0x72,
 	0x64, 0x32, 0x2e, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x52,
@@ -1000,7 +1032,22 @@ var file_config_config_proto_rawDesc = []byte{
 	0x36, 0x0a, 0x17, 0x69, 0x6e, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x5f, 0x63, 0x6f, 0x6e, 0x6e, 0x65,
 	0x63, 0x74, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x6f, 0x75, 0x74, 0x18, 0x14, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x15, 0x69, 0x6e, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
-	0x54, 0x69, 0x6d, 0x65, 0x6f, 0x75, 0x74, 0x22, 0x47, 0x0a, 0x05, 0x49, 0x6d, 0x61, 0x67, 0x65,
+	0x54, 0x69, 0x6d, 0x65, 0x6f, 0x75, 0x74, 0x12, 0x38, 0x0a, 0x18, 0x69, 0x6e, 0x62, 0x6f, 0x75,
+	0x6e, 0x64, 0x5f, 0x61, 0x63, 0x63, 0x65, 0x70, 0x74, 0x5f, 0x6b, 0x65, 0x65, 0x70, 0x61, 0x6c,
+	0x69, 0x76, 0x65, 0x18, 0x15, 0x20, 0x01, 0x28, 0x09, 0x52, 0x16, 0x69, 0x6e, 0x62, 0x6f, 0x75,
+	0x6e, 0x64, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x4b, 0x65, 0x65, 0x70, 0x61, 0x6c, 0x69, 0x76,
+	0x65, 0x12, 0x3a, 0x0a, 0x19, 0x6f, 0x75, 0x74, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x5f, 0x61, 0x63,
+	0x63, 0x65, 0x70, 0x74, 0x5f, 0x6b, 0x65, 0x65, 0x70, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x18, 0x16,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x17, 0x6f, 0x75, 0x74, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x41, 0x63,
+	0x63, 0x65, 0x70, 0x74, 0x4b, 0x65, 0x65, 0x70, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x12, 0x3a, 0x0a,
+	0x19, 0x69, 0x6e, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x5f, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
+	0x5f, 0x6b, 0x65, 0x65, 0x70, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x18, 0x17, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x17, 0x69, 0x6e, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
+	0x4b, 0x65, 0x65, 0x70, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x12, 0x3c, 0x0a, 0x1a, 0x6f, 0x75, 0x74,
+	0x62, 0x6f, 0x75, 0x6e, 0x64, 0x5f, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x5f, 0x6b, 0x65,
+	0x65, 0x70, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x18, 0x18, 0x20, 0x01, 0x28, 0x09, 0x52, 0x18, 0x6f,
+	0x75, 0x74, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x4b, 0x65,
+	0x65, 0x70, 0x61, 0x6c, 0x69, 0x76, 0x65, 0x22, 0x47, 0x0a, 0x05, 0x49, 0x6d, 0x61, 0x67, 0x65,
 	0x12, 0x1d, 0x0a, 0x0a, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x12,
 	0x1f, 0x0a, 0x0b, 0x70, 0x75, 0x6c, 0x6c, 0x5f, 0x70, 0x6f, 0x6c, 0x69, 0x63, 0x79, 0x18, 0x02,
